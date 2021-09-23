@@ -10,8 +10,7 @@
     border-radius: 5px;
 
     font-size: 14px;
-    /* transition: all 0.9s; */
-    transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s;
 }
 
 .primary {
@@ -27,7 +26,6 @@
     color: var(--black);
     background: none;
     border: 1px solid var(--gray-light);
-    /* transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .ghost:hover {
@@ -43,8 +41,7 @@
 
 .down {
     transform: rotate(90deg);
-    /* transition: all 0.2s; */
-    transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s;
 }
 
 .primary svg,
