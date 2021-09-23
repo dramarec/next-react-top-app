@@ -1,10 +1,7 @@
-import styles from './Button.module.css';
-import { ButtonProps } from './Button.props';
-// import { ReactComponent as ArrowIcon } from './arrow.svg';
-// import ArrowIcon from './arrow.svg';
-import ArrowIcon from '../../public/arrow.svg';
 import cn from 'classnames';
-import Image from 'next/image';
+import { ButtonProps } from './Button.props';
+import styles from './Button.module.css';
+import ArrowIcon from '../../public/arrow.svg';
 
 export const Button = ({
 	appearance, arrow = 'none', children, className, ...props
@@ -24,7 +21,6 @@ export const Button = ({
 					[styles.down]: arrow == 'down'
 				})}>
 					<ArrowIcon />
-					{/* <Image src={ArrowIcon} height='10' /> */}
 				</span>
 			}
 		</button>

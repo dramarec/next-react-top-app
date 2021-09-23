@@ -13,3 +13,6 @@ export const Htag = ({ tag, children }: HtagProps): JSX.Element => {
             return <></>;
     }
 };
+
+
+// {tag == 'h1' && <h1 className={styles.h1}>{children}</h1>}
