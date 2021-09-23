@@ -1,15 +1,3 @@
-
-// declare module "*.svg" {
-// 	const content: React.FunctionComponent<React.SVGAttributes<SVGAElement>>;
-// 	export default content;
-// }
-
-declare module '*.svg' {
-	const ReactComponent: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
-	export { ReactComponent };
-}
-
-
 // this file is conditionally added/removed to next-env.d.ts
 // if the static image import handling is enabled
 
@@ -20,15 +8,25 @@ interface StaticImageData {
 	placeholder?: string
 }
 
+declare module "*.svg" {
+	const content: React.FunctionComponent<React.SVGAttributes<SVGAElement>>;
+	export default content;
+}
+
 declare module '*.png' {
 	const content: StaticImageData;
 	export default content;
 }
 
-declare module '*.svg' {
-	const content: React.FC<React.SVGProps<SVGSVGElement>>;
-	export default content;
-}
+// declare module '*.svg' {
+// 	const content: React.FC<React.SVGProps<SVGSVGElement>>;
+// 	export default content;
+// }
+
+// declare module '*.svg' {
+// 	const ReactComponent: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+// 	export { ReactComponent };
+// }
 
 declare module '*.jpg' {
 	const content: StaticImageData;
