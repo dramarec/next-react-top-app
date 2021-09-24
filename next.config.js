@@ -6,15 +6,15 @@ module.exports = {
 	// images: {
 	// 	disableStaticImages: true,
 	// },
-
+	extends: [
+		//...
+		'plugin:@next/next/recommended',
+		"eslint:recommended",
+		"next"
+	],
 	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/i,
-			// issuer section restricts svg as component only to
-			// svgs imported from js / ts files.
-			//
-			// This allows configuring other behavior for
-			// svgs imported from other file types (such as .css)
 			issuer: { and: [/\.(js|ts|md)x?$/] },
 			use: [
 				{
@@ -39,11 +39,10 @@ module.exports = {
 	// },
 
 	////////
-	
+
 	// webpack(config, options) {
 	// 	// const fileLoaderRule = config.module.rules.find(rule => rule.test && rule.test.test('.svg'));
 	// 	// fileLoaderRule.exclude = /\.svg$/;
-
 	// 	config.module.rules.push({
 	// 		loader: '@svgr/webpack',
 	// 		options: {
@@ -56,7 +55,6 @@ module.exports = {
 	// 		},
 	// 		test: /\.svg$/,
 	// 	});
-
 	// 	return config;
 	// }
 
